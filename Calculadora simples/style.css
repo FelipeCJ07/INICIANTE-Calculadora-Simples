@@ -1,0 +1,109 @@
+:root {
+  --bg-color: #f8fafc;
+  --bg-secondary: #ffffff;
+  --text-color: #1f2937;
+  --button-bg: #e2e8f0;
+  --button-hover: #cbd5e1;
+  --history-bg: #f1f5f9;
+}
+
+.dark-theme {
+  --bg-color: #0f172a;
+  --bg-secondary: #1e293b;
+  --text-color: #f8fafc;
+  --button-bg: #334155;
+  --button-hover: #475569;
+  --history-bg: #1e293b;
+}
+
+* { box-sizing: border-box; }
+body {
+  background: linear-gradient(to bottom right, var(--bg-color), var(--button-bg));
+  color: var(--text-color);
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  transition: all 0.3s;
+}
+.calculator {
+  background-color: var(--bg-secondary);
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  max-width: 350px;
+  width: 100%;
+}
+.display {
+  width: 100%;
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid #cbd5e1;
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+  color: var(--text-color);
+  background-color: white;
+}
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+button {
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  background-color: var(--button-bg);
+  color: var(--text-color);
+  transition: background 0.3s;
+}
+button:hover {
+  background-color: var(--button-hover);
+}
+.btn-equal {
+  background-color: #16a34a;
+  color: white;
+}
+.btn-equal:hover {
+  background-color: #22c55e;
+}
+.btn-clear {
+  background-color: #dc2626;
+  color: white;
+  grid-column: span 4;
+}
+.btn-clear:hover {
+  background-color: #ef4444;
+}
+.result {
+  margin: 10px 0;
+  font-size: 1.2rem;
+}
+.history {
+  background-color: var(--history-bg);
+  padding: 10px;
+  border-radius: 10px;
+  max-height: 100px;
+  overflow-y: auto;
+  border: 1px solid #cbd5e1;
+}
+.history p {
+  margin: 5px 0;
+  font-size: 0.9rem;
+}
+.theme-toggle {
+  margin-bottom: 10px;
+  cursor: pointer;
+  background-color: var(--button-bg);
+  color: var(--text-color);
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+}
+.theme-toggle:hover {
+  background-color: var(--button-hover);
+}
