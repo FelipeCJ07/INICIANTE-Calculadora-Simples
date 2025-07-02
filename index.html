@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora Simples</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="calculator">
+    <button class="theme-toggle" onclick="toggleTheme()">Alternar Tema</button>
+    <h1 style="text-align:center;">Calculadora</h1>
+    <input type="text" id="display" class="display" placeholder="Digite...">
+
+    <div class="buttons">
+      <button onclick="append('7')">7</button>
+      <button onclick="append('8')">8</button>
+      <button onclick="append('9')">9</button>
+      <button onclick="append('/')">/</button>
+
+      <button onclick="append('4')">4</button>
+      <button onclick="append('5')">5</button>
+      <button onclick="append('6')">6</button>
+      <button onclick="append('*')">*</button>
+
+      <button onclick="append('1')">1</button>
+      <button onclick="append('2')">2</button>
+      <button onclick="append('3')">3</button>
+      <button onclick="append('-')">-</button>
+
+      <button onclick="append('0')">0</button>
+      <button onclick="append('.')">.</button>
+      <button onclick="append('+')">+</button>
+      <button class="btn-equal" onclick="calculate()">=</button>
+
+      <button class="btn-clear" onclick="clearDisplay()">Limpar</button>
+    </div>
+
+    <div class="result">
+      Resultado: <span id="result"></span>
+    </div>
+
+    <div>
+      <h3>Histórico:</h3>
+      <div class="history" id="history"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
